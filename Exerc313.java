@@ -37,11 +37,19 @@ class Exerc313 {
             } 
         }
         
-        //fibonacci
+        //fatorial 2
+        int fatorial2=1;
+        for (i=1; i<=10; i++){
+            fatorial2 = fatorial2 * i;
+            System.out.println(fatorial2);
+        }
+        
+        
+        /*fibonacci
         int fibo=0;
         for(i=1; i<=11; i++){
-            fibo=fibo+(i-1)+(i-2);
+            fibo+=(i-2);
             System.out.println(fibo);
-        }
+        }*/
     }
 }
