@@ -1,2 +1,2 @@
 # curso-fj11
-Java course. for learning purpose only.
+Java course. For learning purposes only.
