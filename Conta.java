@@ -19,12 +19,41 @@ class Conta {
     
     
     //exe5.8 atributos privados metodos publicos
-    public String setTitular(String titular){
-      return this.titular = titular;
+    public void setTitular(String titular){
+      this.titular = titular;
     }
     
+    public String getTitular(){
+      return this.titular;
+    }
+    
+    public void setNumero(int numero){
+      this.numero=numero;
+    }
+    
+    public int getNumero(){
+      return this.numero;
+    }
+    
+    public String getAgencia(){
+      return this.agencia;
+    } 
+    
+    public void setAgencia(String agencia){
+      this.agencia = agencia;
+    }
+    
+    public String getDataAbertura (){
+      return this.dataAbertura;
+    }
+    
+    public void setDataAbertura(String dataAbertura){
+      this.dataAbertura = dataAbertura;
+    }
+  
+    
     /*criando variavel para armazenar dados. +=concatena string */
-    String recuperaDadosParaImpressao(){
+    public String recuperaDadosParaImpressao(){
       String dados = "Titular: "+this.titular;
       dados += "\nNumero: " + this.numero;
       dados +="\nAgencia: " + this.agencia;

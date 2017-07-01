@@ -3,10 +3,10 @@ class TestaConta{
         Conta c1= new Conta();
         
         c1.setTitular("Daniel");
-        c1.numero = 123;
-        c1.agencia = "45678-9";
-        c1.saldo = 50.0;
-        c1.dataAbertura = "09/06/2015";
+        c1.setNumero(123);
+        c1.setAgencia("45678-9");
+        c1.deposita(50.0);
+        c1.setDataAbertura("09/06/2015");
                
         c1.deposita(100);
         System.out.println(c1.recuperaDadosParaImpressao());
@@ -20,17 +20,18 @@ class TestaConta{
         porem comparando atributis*/
         
         Conta c2 = new Conta();
-        c2.titular = "Daniel";
-        c2.numero = 123;
-        c2.agencia = "45678-9";
-        c2.saldo = 50.0;
-        c2.dataAbertura = "09/06/2015";
+        c2.setTitular("Daniel");
+        c2.setNumero(123);
+        c2.setAgencia("45678-9");
+        c2.deposita(50.0);
+        c2.setDataAbertura("09/06/2015");
+        
         if (c1 == c2){
           System.out.println("iguais c2");
         } else{
           System.out.println("diferentes c2");
         }
-        if (c1.titular == c2.titular){
+        if (c1.getTitular() == c2.getTitular()){
           System.out.println("iguais titular");
         } else{
           System.out.println("diferentes titular");
