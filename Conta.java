@@ -3,7 +3,7 @@ class Conta {
     int numero;
     String agencia;
     double saldo;
-    Data dataAbertura; //valor referencia da memoria do tipo Data
+    String dataAbertura; //valor referencia da memoria do tipo Data
     
     void saca(double valor){
       this.saldo-=valor;
