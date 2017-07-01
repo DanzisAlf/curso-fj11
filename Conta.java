@@ -70,6 +70,7 @@ class Conta {
       this.titular = titular;
       this.numero = numero;
       this.agencia = agencia;
+      //pelo contador ser static, nao precisa this
       this.contador +=1;
       this.identificador = contador;
     }
