@@ -16,4 +16,14 @@ class Conta {
     double calculaRendimento(){
     return this.saldo * 0.1;
     }
+    
+    String recuperaDadosParaImpressao(){
+      String dados = "Titular: "+this.titular;
+      dados += "\nNumero: " + this.numero;
+      dados +="\nAgencia: " + this.agencia;
+      dados +="\nSaldo: " + this.saldo;
+      dados +="\nAbertura: "+ this.abertura;
+      dados +="\nRendimento: "+this.calculaRendimento();
+      return dados;
+    }
 }
