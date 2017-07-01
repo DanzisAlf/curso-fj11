@@ -1,20 +1,26 @@
 class Conta {
-    String titular;
-    int numero;
-    String agencia;
-    double saldo;
-    String dataAbertura; //valor referencia da memoria do tipo Data
+    private String titular;
+    private int numero;
+    private String agencia;
+    private double saldo;
+    private String dataAbertura; //valor referencia da memoria do tipo Data
     
-    void saca(double valor){
+    public void saca(double valor){
       this.saldo-=valor;
     }
     
-    void deposita(double valor){
+    public void deposita(double valor){
       this.saldo+=valor;
     }
     
-    double calculaRendimento(){
+    public double calculaRendimento(){
       return this.saldo * 0.1;
+    }
+    
+    
+    //exe5.8 atributos privados metodos publicos
+    public String setTitular(String titular){
+      return this.titular = titular;
     }
     
     /*criando variavel para armazenar dados. +=concatena string */

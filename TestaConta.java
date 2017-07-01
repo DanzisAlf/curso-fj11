@@ -2,7 +2,7 @@ class TestaConta{
     public static void main(String[] args){
         Conta c1= new Conta();
         
-        c1.titular = "Daniel";
+        c1.setTitular("Daniel");
         c1.numero = 123;
         c1.agencia = "45678-9";
         c1.saldo = 50.0;
