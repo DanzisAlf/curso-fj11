@@ -6,7 +6,7 @@ class TestaConta{
         c1.numero = 123;
         c1.agencia = "45678-9";
         c1.saldo = 50.0;
-        c1.abertura = "09/06/2015";
+        //c1.dataAbertura = "09/06/2015";
                
         c1.deposita(100);
         System.out.println(c1.recuperaDadosParaImpressao());
@@ -24,7 +24,7 @@ class TestaConta{
         c2.numero = 123;
         c2.agencia = "45678-9";
         c2.saldo = 50.0;
-        c2.abertura = "09/06/2015";
+        //c2.dataAbertura = "09/06/2015";
         if (c1 == c2){
           System.out.println("iguais c2");
         } else{
@@ -44,5 +44,14 @@ class TestaConta{
           System.out.println("diferentes c3");
         }
         
+        /*parte 6*/
+        Data data = new Data();
+        data.dia = 1;
+        data.mes = 2;
+        data.ano = 2015;
+        c1.dataAbertura = data;
+        data.ano = 2016;
+        System.out.println(data.ano);
+        System.out.println(c1.dataAbertura.ano);
     }
 }
