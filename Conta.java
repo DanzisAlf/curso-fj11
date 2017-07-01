@@ -4,6 +4,8 @@ class Conta {
     private String agencia;
     private double saldo;
     private String dataAbertura; //valor referencia da memoria do tipo Data
+    private static int contador;
+    private int identificador;
     
     public void saca(double valor){
       this.saldo-=valor;
@@ -61,5 +63,29 @@ class Conta {
       dados +="\nAbertura: "+ this.dataAbertura;
       dados +="\nRendimento: "+this.calculaRendimento();
       return dados;
+    }
+    
+    // construtor
+    public Conta(String titular, int numero, String agencia){
+      this.titular = titular;
+      this.numero = numero;
+      this.agencia = agencia;
+      this.contador +=1;
+      this.identificador = contador;
+    }
+    
+    //opcao para construtor default sem argumento
+    public Conta (){
+      this.contador+=1;
+      this.identificador = contador;
+    }
+    
+    //contador pertence a classe, sendo o mesmo para todos objetos
+    public static int getContador(){
+      return contador;
+    }
+    
+    public int getIdentificador(){
+      return identificador;
     }
 }
