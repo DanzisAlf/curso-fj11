@@ -1,6 +1,8 @@
-/bin/
-/.metadata/
-/.recommenders/
-/RemoteSystemsTempFiles/
+*/.metadata/*
+*/bin/
+*/.recommenders/
+*/RemoteSystemsTempFiles/
 *.class
-.settings/
+*/.settings/
+*/.metadata/*
+*/.classpath
