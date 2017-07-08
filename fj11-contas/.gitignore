@@ -5,7 +5,7 @@
 *.class
 */.settings/
 */.metadata/*
-*/.classpath
-*/doc/*
+*.classpath
+/doc/
 
 /bin/

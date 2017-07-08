@@ -3,6 +3,7 @@ package br.com.caelum.contas.modelo;
 /**
  * 
  * classe que modela as contas do sistema
+ * 
  * @author Danzis
  *
  */
@@ -12,7 +13,7 @@ public class Conta {
 	private String titular;
 	private int numero;
 	private String agencia;
-	private double saldo;
+	protected double saldo;
 	private String dataDeAbertura;
 
 	// Command CTRL+3 ggas (getters setters)
@@ -47,28 +48,40 @@ public class Conta {
 	public void setDataDeAbertura(String dataDeAbertura) {
 		this.dataDeAbertura = dataDeAbertura;
 	}
-/**
- * metodo que retorna o saldo
- * @return valor de saldo da conta
- */
+
+	/**
+	 * metodo que retorna o saldo
+	 * 
+	 * @return valor de saldo da conta
+	 */
 	public double getSaldo() {
 		return saldo;
 	}
-	
-/**
- * metodo para incrementar o valor de saldo da conta
- * @param valor valor a ser depositado
- */
+
+	/**
+	 * metodo para incrementar o valor de saldo da conta
+	 * 
+	 * @param valor
+	 *            - valor a ser depositado
+	 */
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
 
-	public boolean saca(double valor) {
+	public void saca(double valor) {
 		if (valor <= this.saldo) {
 			this.saldo -= valor;
-			return true;
 		}
-		return false;
+	}
+
+	// metodo criado nos filhos e utilizar override do getTipo
+	public String getTipo() {
+		return "Conta";
+	}
+	
+	public void transfere(double valor, Conta conta) {
+		this.saca(valor);
+		conta.deposita(valor);
 	}
 
 }

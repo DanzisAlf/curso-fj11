@@ -7,11 +7,5 @@ public class TestaConta {
 		Conta conta = new Conta();
 		conta.setTitular("Ozzy");
 		conta.deposita(300.0);
-
-		if (conta.saca(100.0)) {
-			System.out.println("Sacou");
-		} else {
-			System.out.println("Nao Sacou");
-		}
 	}
 }
