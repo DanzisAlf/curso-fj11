@@ -7,8 +7,8 @@ public class TestaConta {
 		conta.setTitular("Ozzy");
 		conta.deposita(300.0);
 
-		if (conta.saca(500.0)) {
-			System.out.println("Sacou:");
+		if (conta.saca(100.0)) {
+			System.out.println("Sacou");
 		} else {
 			System.out.println("Nao Sacou");
 		}

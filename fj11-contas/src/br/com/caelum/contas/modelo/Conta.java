@@ -1,5 +1,11 @@
 package br.com.caelum.contas.modelo;
 
+/**
+ * 
+ * classe que modela as contas do sistema
+ * @author Danzis
+ *
+ */
 public class Conta {
 
 	// Attributes
@@ -41,11 +47,18 @@ public class Conta {
 	public void setDataDeAbertura(String dataDeAbertura) {
 		this.dataDeAbertura = dataDeAbertura;
 	}
-
+/**
+ * metodo que retorna o saldo
+ * @return valor de saldo da conta
+ */
 	public double getSaldo() {
 		return saldo;
 	}
-
+	
+/**
+ * metodo para incrementar o valor de saldo da conta
+ * @param valor valor a ser depositado
+ */
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
