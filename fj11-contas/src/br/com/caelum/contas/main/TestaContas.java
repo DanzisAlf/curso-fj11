@@ -7,7 +7,7 @@ public class TestaContas {
 	/* tela na api do jar */
 
 	public static void main(String[] args) {
-		SistemaBancario.mostraTela(false);
+		SistemaBancario.mostraTela(true);
 		// TelaDeContas.main(args);
 	}
 }
