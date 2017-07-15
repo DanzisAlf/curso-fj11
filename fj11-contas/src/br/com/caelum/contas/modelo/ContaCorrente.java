@@ -3,6 +3,7 @@ package br.com.caelum.contas.modelo;
 // Classe filha de Conta
 
 public class ContaCorrente extends Conta {
+	@Override
 	public String getTipo() {
 		return "Conta Corrente";
 	}
