@@ -64,11 +64,18 @@ public abstract class Conta {
 	 * @param valor
 	 *            - valor a ser depositado
 	 */
-	public void deposita(double valor) {
-		this.saldo += valor;
+	public void deposita(double valor) throws IllegalArgumentException {
+		if (valor < 0) {
+			throw new IllegalArgumentException("Valor invalido");
+		} else {
+			this.saldo += valor;
+		}
 	}
 
 	public void saca(double valor) {
+		if (valor < 0) {
+			throw new IllegalArgumentException("Valor invalido.");
+		}
 		if (valor <= this.saldo) {
 			this.saldo -= valor;
 		}
@@ -76,8 +83,7 @@ public abstract class Conta {
 
 	// metodo criado nos filhos e utilizar override do getTipo
 	public abstract String getTipo();
-	
-	
+
 	public void transfere(double valor, Conta conta) {
 		this.saca(valor);
 		conta.deposita(valor);
