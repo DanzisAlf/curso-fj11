@@ -8,5 +8,6 @@ public class TestaConta {
 		Conta conta = new ContaCorrente();
 		conta.setTitular("Ozzy");
 		conta.deposita(300.0);
+		System.out.println(conta);
 	}
 }
