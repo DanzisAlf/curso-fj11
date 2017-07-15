@@ -7,7 +7,7 @@ package br.com.caelum.contas.modelo;
  * @author Danzis
  *
  */
-public class Conta {
+public  class Conta {
 
 	// Attributes
 	private String titular;
