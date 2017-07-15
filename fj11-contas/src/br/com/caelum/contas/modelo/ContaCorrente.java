@@ -5,7 +5,7 @@ package br.com.caelum.contas.modelo;
 public class ContaCorrente extends Conta {
 	public String getTipo() {
 		//return "Conta Corrente";
-		return super.getTipo()+ "Corrente";
+		return "Corrente";
 	}
 	
 	//muda a regra para saque em conta corrente

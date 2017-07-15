@@ -7,7 +7,7 @@ package br.com.caelum.contas.modelo;
  * @author Danzis
  *
  */
-public  class Conta {
+public abstract class Conta {
 
 	// Attributes
 	private String titular;
@@ -75,9 +75,8 @@ public  class Conta {
 	}
 
 	// metodo criado nos filhos e utilizar override do getTipo
-	public String getTipo() {
-		return "Conta";
-	}
+	public abstract String getTipo();
+	
 	
 	public void transfere(double valor, Conta conta) {
 		this.saca(valor);

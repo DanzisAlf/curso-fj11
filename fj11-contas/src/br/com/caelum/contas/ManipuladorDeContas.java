@@ -12,12 +12,6 @@ public class ManipuladorDeContas {
 	/* instancia o new conta para "forcar" criar conta */
 	public void criaConta(Evento evento) {
 
-		this.conta = new Conta();
-		this.conta.setAgencia(evento.getString("agencia"));
-		this.conta.setNumero(evento.getInt("numero"));
-		this.conta.setTitular(evento.getString("titular"));
-		this.conta.setDataDeAbertura("2/2/22");
-
 		/*
 		 * selecionar o tipo de conta no radio button buscando o input escrito
 		 * no campo de nome tipo
