@@ -88,10 +88,21 @@ public abstract class Conta {
 		this.saca(valor);
 		conta.deposita(valor);
 	}
-	
+
 	@Override
 	public String toString() {
-		return "[titular "+ this.titular + " numero "+this.numero + " agencia "+ this.agencia+ "]";
+		//this.titular = this.titular.toUpperCase();
+		return "[titular " + this.titular.toUpperCase() + " numero " + this.numero + " agencia " + this.agencia + "]";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		Conta outraConta = (Conta) obj;
+
+		return this.numero == outraConta.numero && this.agencia.equals(outraConta.agencia);
 	}
 
 }
