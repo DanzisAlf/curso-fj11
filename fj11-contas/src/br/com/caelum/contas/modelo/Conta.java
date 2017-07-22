@@ -7,7 +7,7 @@ package br.com.caelum.contas.modelo;
  * @author Danzis
  *
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta> {
 
 	// Attributes
 	private String titular;
@@ -91,7 +91,7 @@ public abstract class Conta {
 
 	@Override
 	public String toString() {
-		//this.titular = this.titular.toUpperCase();
+		// this.titular = this.titular.toUpperCase();
 		return "[titular " + this.titular.toUpperCase() + " numero " + this.numero + " agencia " + this.agencia + "]";
 	}
 
@@ -105,4 +105,7 @@ public abstract class Conta {
 		return this.numero == outraConta.numero && this.agencia.equals(outraConta.agencia);
 	}
 
+	public int compareTo(Conta outraconta) {
+		return this.titular.compareTo(outraconta.titular);
+	}
 }

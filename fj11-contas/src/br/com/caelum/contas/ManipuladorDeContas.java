@@ -1,5 +1,8 @@
 package br.com.caelum.contas;
 
+import java.util.Collections;
+import java.util.List;
+
 import br.com.caelum.contas.modelo.Conta;
 import br.com.caelum.contas.modelo.ContaCorrente;
 import br.com.caelum.contas.modelo.ContaPoupanca;
@@ -40,16 +43,21 @@ public class ManipuladorDeContas {
 
 	public void saca(Evento evento) {
 		/*
-		 * valorOperacao eh o novo nome do campo substituindo ao campo valor
-		 * nao precisa do if, pois o tipo de conta ja eh definido na criacao da conta
-		 * entao se for conta corrente ele utiliza o metodo de la
+		 * valorOperacao eh o novo nome do campo substituindo ao campo valor nao
+		 * precisa do if, pois o tipo de conta ja eh definido na criacao da
+		 * conta entao se for conta corrente ele utiliza o metodo de la
 		 */
 		double valor = evento.getDouble("valorOperacao");
 		this.conta.saca(valor);
 	}
-	
-	public void transfere(Evento evento){
+
+	public void transfere(Evento evento) {
 		Conta destino = (Conta) evento.getSelecionadoNoCombo("destino");
 		conta.transfere(evento.getDouble("valorTransferencia"), destino);
+	}
+
+	public void ordenaLista(Evento evento) {
+		List<Conta> contas = evento.getLista("destino");
+		Collections.sort(contas);
 	}
 }
