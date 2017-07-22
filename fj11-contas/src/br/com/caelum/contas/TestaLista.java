@@ -10,14 +10,14 @@ public class TestaLista {
 	public static void main(String[] args) {
 
 		ArrayList<Conta> contaz = new ArrayList<>();
-		Conta c = new ContaCorrente();
 
 		for (int i = 0; i < 5; i++) {
+			Conta c = new ContaCorrente();
 			Random s = new Random();
-			c.deposita(s.nextInt(100 *i+1));
-			System.out.println(c.getSaldo());
+			c.deposita(s.nextInt(100 * i + 1));
 			contaz.add(c);
 		}
-
+		
+		System.out.println(contaz);
 	}
 }
