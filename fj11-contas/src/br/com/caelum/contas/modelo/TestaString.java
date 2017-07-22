@@ -23,5 +23,9 @@ public class TestaString {
 		for (j = p.length() - 1; j >= 0; j--) {
 			System.out.print(p.charAt(j));
 		}
+		
+		StringBuilder nx = new StringBuilder();
+		nx.append("Marrocos");
+		System.out.println("\n"+ nx.reverse());
 	}
 }
