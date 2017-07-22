@@ -88,5 +88,10 @@ public abstract class Conta {
 		this.saca(valor);
 		conta.deposita(valor);
 	}
+	
+	@Override
+	public String toString() {
+		return "[titular "+ this.titular + " numero "+this.numero + " agencia "+ this.agencia+ "]";
+	}
 
 }
